@@ -1,8 +1,9 @@
 ## qnap routing
 
-- [ ] routing setup
-- [ ] advertise routing
+- [x] routing setup
+- [x] advertise routing
 - [x] squid proxy
+- [x] connecting to btsync node on android
 
 ## qnap and mobile data issue
 
