@@ -26,6 +26,8 @@ $ nice -n 19 terraform -parallelism 1
 
 ## Enlightenment vs xfce4 vs YourWarName
 
+### Since 2011
+
 I'm using Enlightenment. I've been using it. Since 2011 or even before that, I don't remember =))
 
 My Enlightenment setup is a nightmare, in some situation it consumes quite a lot of CPU. Switching quickly to xfc4
@@ -39,7 +41,28 @@ What I tried in the past
 quite a lot of annoying events and they can slow down the system at the same time.)
 * Traced some problems down to... nowhere.
 
+### Cpulimit
+
+Sometimes Enlightenment uses so much cpu. It's 50% from htop output. Looks like an unknown issue with vesa
+and though admitted no root cause/fix has been found. An easy work-around is to run the daemon with some cpu limit
+
+```
+exec dbus-launch  cpulimit -l 40 enlightenment_star
+```
+
+Using 30 or lower number will not work. It will force Enlightenment to behave the weird way: Starting with 20, 
+it's impossible to login. With 30, can log in, slowly, and when the desktop environment is locked (ie when I'm
+away from my laptop for 5 minutes), the login screen will lead to another login screen , and it ends up with
+some wayland or alike windows inside enlightenment :) That's the best bugt I've found. I think I took a picture
+of this but yeah, after switching to `-l 40` everything works fine and I haven't had time to play with 30 another time.
+
 ## Firefox
+
+### cpulimit
+
+```
+exec dbus-launch cpulimit -l 200 firefox --class FirefoxNoXXX -ProfileManager -no-remote
+```
 
 ### Config
 
