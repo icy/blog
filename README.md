@@ -20,7 +20,7 @@ will work accordingly :)
 ## Slow down your applications
 
 ```
-$ terragrunt --terragrunt-parallelism 1 apply
+$ cpulimit -l 20 terragrunt --terragrunt-parallelism 1 apply
 $ nice -n 19 terraform -parallelism 1
 ```
 
