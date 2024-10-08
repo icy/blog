@@ -47,14 +47,14 @@ Sometimes Enlightenment uses so much cpu. It's 50% from htop output. Looks like 
 and though admitted no root cause/fix has been found. An easy work-around is to run the daemon with some cpu limit
 
 ```
-exec dbus-launch  cpulimit -l 40 enlightenment_star
+exec dbus-launch  cpulimit -l 40 enlightenment_start
 ```
 
-Using 30 or lower number will not work. It will force Enlightenment to behave the weird way: Starting with 20, 
-it's impossible to login. With 30, can log in, slowly, and when the desktop environment is locked (ie when I'm
+Using 30 or lower number will not work. It will force Enlightenment to behave crazily: Starting with 20, 
+it's impossible to login. With 30, (I) can log in, slowly, and when the desktop environment is locked (ie when I'm
 away from my laptop for 5 minutes), the login screen will lead to another login screen , and it ends up with
-some wayland or alike windows inside enlightenment :) That's the best bugt I've found. I think I took a picture
-of this but yeah, after switching to `-l 40` everything works fine and I haven't had time to play with 30 another time.
+some wayland or alike windows inside enlightenment :) That's the best bug I've found. I think I took a picture
+of this but yeah, after switching to `-l 40` everything works fine and I haven't forgotten the issue with 30.
 
 ## Firefox
 
@@ -121,3 +121,14 @@ Thanks to `pstree`
 * htop. Look at cpu usage, which is often indicating the source
   of the problem on my laptop. It's either Enlightenment or Firefox
 * iostat or vmstat for fun :)
+
+## Uprecords
+
+```
+     1    93 days, 22:14:52 | Linux 5.10.5-arch1-1      Mon Mar  1 07:31:59 2021
+     2    66 days, 09:53:32 | Linux 6.2.8-arch1-1       Fri Apr 14 20:39:38 2023
+->   3    46 days, 04:32:58 | Linux 6.10.6-arch1-1      Fri Aug 23 16:27:14 2024
+     4    43 days, 14:21:48 | Linux 6.5.7-arch1-1       Fri Dec  1 20:10:17 2023
+     5    42 days, 02:31:50 | Linux 5.10.5-arch1-1      Sun Jan 17 20:03:24 2021
+     6    33 days, 01:09:50 | Linux 6.1.4-arch1-1       Wed Feb  8 15:55:10 2023
+```
