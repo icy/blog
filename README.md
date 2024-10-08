@@ -132,3 +132,11 @@ Thanks to `pstree`
      5    42 days, 02:31:50 | Linux 5.10.5-arch1-1      Sun Jan 17 20:03:24 2021
      6    33 days, 01:09:50 | Linux 6.1.4-arch1-1       Wed Feb  8 15:55:10 2023
 ```
+
+## The tasks this laptop has been serving...
+
+- [x] A coin miner during covid time. For fun, of course, net profit is negative :)
+- [ ] Provide the main media system for my little family :D Mostly music
+- [ ] A main source of income for many years :D
+- [x] An image server. Now I have to buy a NAS device
+- [ ] A backup server for android devices 
