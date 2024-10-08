@@ -17,7 +17,7 @@ When my browser is running the laptop really needs CPU Power policy set to `Maxi
 This would be fine as long as the external power source is available. The CPU fan
 will work accordingly :)
 
-## Slow down your applications
+## Slow down my applications
 
 ```
 $ cpulimit -l 20 terragrunt --terragrunt-parallelism 1 apply
