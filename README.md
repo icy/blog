@@ -5,7 +5,7 @@ As an engineer I need to tune my laptop to run at its best performance. Why? The
 ## Specification
 
 My laptop is pretty old. It's at least 7 years old. 
-(I bought it from the 2nd market.)
+(It's X240, I bought it from the 2nd market.)
 Its memory capacity is 8GB. And cpu? 
 It's  `Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz` (2 cores x 2 threads)?
 This is just enough for daily web surfing... until it isn't.
