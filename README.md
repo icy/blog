@@ -125,12 +125,14 @@ Thanks to `pstree`
 ## Uprecords
 
 ```
+$ uprecords 
+     #               Uptime | System                                     Boot up
+----------------------------+---------------------------------------------------
      1    93 days, 22:14:52 | Linux 5.10.5-arch1-1      Mon Mar  1 07:31:59 2021
-     2    66 days, 09:53:32 | Linux 6.2.8-arch1-1       Fri Apr 14 20:39:38 2023
-->   3    46 days, 04:32:58 | Linux 6.10.6-arch1-1      Fri Aug 23 16:27:14 2024
-     4    43 days, 14:21:48 | Linux 6.5.7-arch1-1       Fri Dec  1 20:10:17 2023
-     5    42 days, 02:31:50 | Linux 5.10.5-arch1-1      Sun Jan 17 20:03:24 2021
-     6    33 days, 01:09:50 | Linux 6.1.4-arch1-1       Wed Feb  8 15:55:10 2023
+->   2    93 days, 17:23:38 | Linux 6.10.6-arch1-1      Fri Aug 23 16:27:29 2024
+     3    93 days, 17:23:01 | Linux 6.10.6-arch1-1      Fri Aug 23 16:26:47 2024
+     4    66 days, 09:53:32 | Linux 6.2.8-arch1-1       Fri Apr 14 20:39:38 2023
+     5    43 days, 14:21:48 | Linux 6.5.7-arch1-1       Fri Dec  1 20:10:17 2023
 ```
 
 ## The tasks this laptop has been serving...
