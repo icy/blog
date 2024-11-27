@@ -1,3 +1,7 @@
+## Description
+
+All information below is relevant to QNAP TS-x64 device.
+
 ## Issues 
 
 ### 3. QuFirewall is too permissive dealing with docker container
