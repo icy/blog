@@ -10,7 +10,7 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 qnap TS-x64 has two hardware (mainboard)  versions. The old version has two memory slots; that indicates it's possible to extend the device with  more memory. The discovery is found from this excellent thread: https://forum.qnap.com/viewtopic.php?t=170942
 
-The information is availalbe via `demidecode`  command. According the output (below), the factory configuration comes with memory device `TS1GSH64V6B` which is  some kinda enterprise thing and you hardly find that on the normal market. In stead  I bought `TS2666HSB-8G` (Transcend DRAM module,  So-DIMM, DDR4 2666 1Rx8  (8G)) from Conrad (at €27.63) and it's  working well.
+The information is availalbe via `demidecode`  command. According the output (below), the factory configuration comes with memory device `TS1GSH64V6B` which is  some kinda enterprise thing and you hardly find that on the normal market. Instead  I bought `TS2666HSB-8G` (Transcend DRAM module,  So-DIMM, DDR4 2666 1Rx8  (8G)) from Conrad (at €27.63) and it's  working well.
 
 ```
 $ dmidecode |grep Memory -A 20
