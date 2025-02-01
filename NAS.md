@@ -6,7 +6,7 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues 
 
-### 5. Prevent NAS from being update a/o calling home
+### 5. Prevent NAS from being updated a/o calling home
 
 The following hosts are being used by internal QNAP services. To prevent the device from calling its home, some DNS tricky can be used. This is necessary and helpful when the outbound network has some low or limited quota.
 
