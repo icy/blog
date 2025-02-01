@@ -6,6 +6,17 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues 
 
+### 5. Prevent NAS from being update a/o calling home
+
+The following hosts are being used by internal QNAP services. To prevent the device from calling its home, some DNS tricky can be used. This is necessary and helpful when the outbound network has some low or limited quota.
+
+- osm.api.myqnapcloud.com
+- auth.myqnapcloud.io
+- download.qnap.com
+- update.qnap.com
+- edge.myqnapcloud.io
+- edge.myqnapcloud.io
+
 ### 4. Memory upgrade
 
 qnap TS-x64 has two hardware (mainboard)  versions. The old version has two memory slots; that indicates it's possible to extend the device with  more memory. The discovery is found from this excellent thread: https://forum.qnap.com/viewtopic.php?t=170942
