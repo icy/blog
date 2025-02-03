@@ -16,6 +16,7 @@ The following hosts are being used by internal QNAP services. To prevent the dev
 - update.qnap.com
 - edge.myqnapcloud.io
 - edge.myqnapcloud.io
+- core2.myqnapcloud.io
 
 ### 4. Memory upgrade
 
