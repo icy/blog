@@ -20,3 +20,19 @@ I won't tell my "why"; but I share how the thing would be done.
 
 Please mind the order of new entries. The very first line wins and some application which
 works with `uid` may only print the first username what matches the `uid`.
+
+### Fixing my custom dns resolver after system upgrades
+
+Before continuing these commands, I have to fix `/etc/resolv.conf` to use some temporary DNS resolver.
+The change will be reverted once `mdns` can be up and running.
+
+```
+$ sudo su -
+$ find /usr/lib/ruby -type d -exec chmod o+x,g+x -R {} \;
+$ find /usr/lib/ruby -type f -exec chmod o+r,g+r -R {} \;
+$ su - dns -s /bin/bash
+$ gem install --user-install eventmachine --version "~> 1.0.0"
+$ gem install --user-install rubydns --version "0.6.7"
+$ exit
+$ systemctl restart mdns
+```
