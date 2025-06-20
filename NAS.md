@@ -6,6 +6,16 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues 
 
+### 6. Nas upgrade interrupted and failed to boot
+
+Written as much  as I still recall, 2025-06-20... My mistake to to  have a write up quickly.
+
+In the last days of Jan 2025 I decided to upgrade my driver firmware. First I disabled network firewall  to allow the  device to connect to public internet, and  then process the normal upgrade.
+
+It took so much time. The device seemed to boot up again, but got  stuck.  I decided to reboot it, didn't work either. After having my monitor pluggend into the hdmi port, I was shocked: The screen was black. something was terribly wrong. I turned off the device, and  booted up the device with an ArchLlinux usb. This was the cool part  of using Qnap: it's great chance to get some intial idea of the issue. What was that?  Well, the raid-1 array went wrong, and when reading  `/proc/mdstat`, it's clearly that the array was being rebuilt/recovered.
+
+(TODO)
+
 ### 5. Prevent NAS from being updated a/o calling home
 
 The following hosts are being used by internal QNAP services. To prevent the device from calling its home, some DNS tricky can be used. This is necessary and helpful when the outbound network has some low or limited quota.
