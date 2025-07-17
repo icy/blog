@@ -8,13 +8,30 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ### 6. Nas upgrade interrupted and failed to boot
 
-Written as much  as I still recall, 2025-06-20... My mistake to to  have a write up quickly.
+Written as much  as I still recall, 2025-06-20... My mistake not to have a write up quickly.
 
-In the last days of Jan 2025 I decided to upgrade my driver firmware. First I disabled network firewall  to allow the  device to connect to public internet, and  then process the normal upgrade.
+In the last day of Jan 2025 I decided to upgrade my NAS firmware. First I disabled network firewall  to allow the  device to connect to public internet, and  then process the normal upgrade.
 
 It took so much time. The device seemed to boot up again, but got  stuck.  I decided to reboot it, didn't work either. After having my monitor pluggend into the hdmi port, I was shocked: The screen was black. something was terribly wrong. I turned off the device, and  booted up the device with an ArchLlinux usb. This was the cool part  of using Qnap: it's great chance to get some intial idea of the issue. What was that?  Well, the raid-1 array went wrong, and when reading  `/proc/mdstat`, it's clearly that the array was being rebuilt/recovered.
 
-(TODO)
+I spent the night to recover the raid array. This could be done by following the  basic instructions from ArchLinux's wiki page  https://wiki.archlinux.org/title/RAID. Nothing special, except that:
+
+1. The raid-1 configuration wasn't assembled correctly at boot time. I expect sda-0 was going  with sdb-0, sda-1 with sdb-1 and so on, but in fact, the number went  quite  randomly. It took me a while to figure out  the correct assemble configuration
+2. The sync process took very long time, I left them running and saw the  result (`/proc/mdstat`) on my TV (yes, the NAS was connected to the TV)
+
+When I could confirm the raid array was healty status, I attempted to re-install the device
+1. Unplug both disks and reset the  device: ttps://www.qnap.com/en/how-to/faq/article/how-can-i-reset-my-nas
+2. Plug in 1 disk from the  raid-1 array and boot up the NAS
+3. I can't find the link now, but  from what I read, it's possible that Installation wizard could recognize and use any existing disk/data. This was a good news and actually made me confident to process. And it's very true! During the very first steps of  the  installation Wizard, I carefully selected the option to re-use the existing disk.
+4. After a while, the Nas was accessible, of course, with new UI password and certificates. Phew!
+5. When I could access the NAS again, I did some basic things  to verity the health  of  the  disk. Then plugged the  2nd disk and waited for the system to recover the raid array.
+6. The remained things is  to update admin password, reconfigured some docker setting (it seemed sth wrong happened, and I had to reconfigure my btsync docker daemon.)
+
+Lessons learnt
+
+1. Better to have backup of all data
+2. Better to have backup of the whole NAS system (data and settings)
+3. QNAP update  can  be painful, so can we just don't do that?
 
 ### 5. Prevent NAS from being updated a/o calling home
 
