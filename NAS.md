@@ -4,7 +4,18 @@ All information below is relevant to QNAP TS-x64 device. My version is`-8G` whic
 
 Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-8G.pdf
 
-## Issues 
+## Issues
+
+### 7. IGNORE_EXTENSIONS in Network Recycle Bin
+
+Since 2013: https://forum.qnap.com/viewtopic.php?t=84584
+
+> Problem: On a new TS-469U-RP + firmware 4.0.4 or 4.0.5 the functionality from Control Panel -> Network Recycle Bin -> Exclude these file extensions: (case insensitive, separated by comma ',') tmp, temp, wtmp, blk, dat, qold, qtmp don't work. The .tmp files are moved in recycle bin.
+
+> Cause: IGNORE_EXTENSIONS option from /etc/config/libtrash.conf wants a semi-colon delimited list of file name extensions, not comma + space, like in UI.
+
+> Temporary Solution: write in the input field from UI the extensions separated only by a semi-colon: tmp;temp;wtmp;blk;dat;qold;qtmp then click Apply button.
+The list is saved OK in /etc/config/libtrash.conf, despite it is displayed wrong in the UI.
 
 ### 6. Nas upgrade interrupted and failed to boot
 
