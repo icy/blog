@@ -8,6 +8,8 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ### 8. Allow some users to ssh to system
 
+tl;dr: Giving non-administrator access to the system is too dangerous. Because all folders on NAS system has very permissive permissions `777`, and well, you can add, remove do whatever on them QNAP host. 
+
 ```
 $ cd /etc/config/ssh
 $ {  echo AllowTcpForwarding yes; echo AllowUsers admin foo bar; } > sshd_user_config
