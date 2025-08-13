@@ -45,6 +45,22 @@ Adding `AllowGrousp` to `sshd_user_config` doesn't work: The final compiled file
 
 The actual configuration file is found from `/mnt/HDA_ROOT/.config/...`
 
+I have looked if there is PAM setting, no such special thing in /etc/pam.d. Now hard-coded debug level!
+
+```
+## Configure QuFirewall to allow port 33 to my client ip.
+/usr/sbin/sshd -D -e -o UsePAM=no -f /etc/config/ssh/sshd_config -o LogLevel=debug -p 33
+
+Could not open user 'sony' authorized keys '/share/homes/foo/.ssh/authorized_keys': Permission denied
+debug1: restore_uid: 0/0
+debug1: temporarily_use_uid: 1003/100 (e=0/0)
+debug1: trying public key file /share/homes/sony/.ssh/authorized_keys2
+Could not open user 'sony' authorized keys '/share/homes/foo/.ssh/authorized_keys2': Permission denied
+debug1: restore_uid: 0/0
+```
+
+What the FilePermission here?!
+
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
 
 Since 2013: https://forum.qnap.com/viewtopic.php?t=84584
