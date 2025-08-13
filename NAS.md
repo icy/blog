@@ -66,6 +66,19 @@ What the FilePermission here?! I have ensured unix permissions (`chmod/chown/get
 drwxrwxrwx 9 admin administrators 4096 2024-12-10 16:36 /share/CE_CACHEDEV1_DATA/homes//
 ```
 
+I've changed the user home directory to `/home/_foo/`, fix all permissions, and get something new now
+
+```
+debug1: temporarily_use_uid: 1003/100 (e=0/0)
+debug1: trying public key file /home/_foo//.ssh/authorized_keys
+debug1: fd 6 clearing O_NONBLOCK
+debug1: restore_uid: 0/0
+debug1: temporarily_use_uid: 1003/100 (e=0/0)
+debug1: trying public key file /home/_foo//.ssh/authorized_keys2
+debug1: fd 6 clearing O_NONBLOCK
+debug1: restore_uid: 0/0
+```
+
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
 
 Since 2013: https://forum.qnap.com/viewtopic.php?t=84584
