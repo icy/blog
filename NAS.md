@@ -6,6 +6,22 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 8. Allow some users to ssh to system
+
+```
+$ cd /etc/config/ssh
+$ {  echo AllowTcpForwarding yes; echo AllowUsers admin foo bar; } > sshd_user_config
+$ # the file sshd_user_config will be used to generate the final configuration file /etc/config/ssh/sshd_config
+$ # test configuration
+$ /usr/sbin/sshd -t -f /etc/config/ssh/sshd_config -p 22
+Unable to load host key "/etc/ssh/ssh_host_dsa_key": unknown or unsupported key type
+Unable to load host key: /etc/ssh/ssh_host_dsa_key
+$ :: /etc/init.d/services restart # well, restart all services ; don't take this massive action
+$ :: /etc/init.d/login.sh restart # no this is not safe ! ssh won't be back
+```
+
+Go to  `Control Panel / Network and File services / Telnet + SSH / Disable + Enable`. There is place with `Edit Access Permission` but that doesn't allow you to include non-administrative users into the list. 
+
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
 
 Since 2013: https://forum.qnap.com/viewtopic.php?t=84584
