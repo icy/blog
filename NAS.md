@@ -22,12 +22,20 @@ $ :: /etc/init.d/login.sh restart # no this is not safe ! ssh won't be back
 
 Go to  `Control Panel / Network and File services / Telnet + SSH / Disable + Enable`. There is place with `Edit Access Permission` but that doesn't allow you to include non-administrative users into the list. 
 
-Please do note only a few algorithms are acceptable
+Please do note only a few algorithms are acceptable. From configuration:
 
 ```
 PubkeyAcceptedAlgorithms +ssh-rsa-cert-v01@openssh.com,ssh-rsa
 CASignatureAlgorithms +ssh-rsa
 HostbasedAcceptedAlgorithms +ssh-rsa-cert-v01@openssh.com,ssh-rsa
+```
+
+Via `ssh -vv foo@nas_ip`:
+
+```
+debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh
+.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nist
+p256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256
 ```
 
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
