@@ -59,7 +59,12 @@ Could not open user 'foo' authorized keys '/share/homes/foo/.ssh/authorized_keys
 debug1: restore_uid: 0/0
 ```
 
-What the FilePermission here?! I have ensured unix permissions (`chmod/chown/getfacl/setfacl`) are correctly set up. but FileStation (web ui) doesn't have any trivial way to gain information about this path. 
+What the FilePermission here?! I have ensured unix permissions (`chmod/chown/getfacl/setfacl`) are correctly set up. but FileStation (web ui) doesn't have any trivial way to gain information about this path. So the issue is that the top / parent foler belongs to `adminisrators` group~
+
+```
+[/share] # ls -lad /share/CE_CACHEDEV1_DATA/homes/     
+drwxrwxrwx 9 admin administrators 4096 2024-12-10 16:36 /share/CE_CACHEDEV1_DATA/homes//
+```
 
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
 
