@@ -41,6 +41,8 @@ debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp25
 p256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256
 ```
 
+Adding `AllowGrousp` to `sshd_user_config` doesn't work: The final compiled file doesn't include such setting. That means the generator script has intentionally overwritten user configuration!
+
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
 
 Since 2013: https://forum.qnap.com/viewtopic.php?t=84584
