@@ -18,6 +18,9 @@ Unable to load host key "/etc/ssh/ssh_host_dsa_key": unknown or unsupported key 
 Unable to load host key: /etc/ssh/ssh_host_dsa_key
 $ :: /etc/init.d/services restart # well, restart all services ; don't take this massive action
 $ :: /etc/init.d/login.sh restart # no this is not safe ! ssh won't be back
+
+# Cross check, by dumping all active ssh configuration
+$ sshd -T -f /etc/config/ssh/sshd_config
 ```
 
 Go to  `Control Panel / Network and File services / Telnet + SSH / Disable + Enable`. There is place with `Edit Access Permission` but that doesn't allow you to include non-administrative users into the list. *Effectively QNAP has some custom patch so that the configuration file doesn't work?* From this page `Edit Access Permission`, it's mentioned that `only administrators can login remotely`
