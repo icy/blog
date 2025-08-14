@@ -81,6 +81,8 @@ debug1: fd 6 clearing O_NONBLOCK
 debug1: restore_uid: 0/0
 ```
 
+**HOWEVER**, anything under `/home/_foo` will not surve a device reoobt. Those are just gone!
+
 ### 7. IGNORE_EXTENSIONS in Network Recycle Bin
 
 Since 2013: https://forum.qnap.com/viewtopic.php?t=84584
