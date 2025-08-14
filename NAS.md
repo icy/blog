@@ -6,6 +6,11 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 9. Adding new cronjob
+
+1. Modify configuration (crontab-format): `/etc/config/contab`
+2. Reload/restart the daemon: `/etc/init.d/crond.sh reload`
+
 ### 8. Allow some users to ssh to system
 
 tl;dr: Giving non-administrator access to the system is too dangerous. Because all folders on NAS system has very permissive permissions `777`, and well, you can add, remove do whatever on them QNAP host. 
