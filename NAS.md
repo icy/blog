@@ -6,6 +6,10 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 11. qnas_console_install
+
+TODO. This, with drawPic daemon, was consuming CPU at an abonormal rate. killing the process is safe. Weird.
+
 ### 10. Data transfer speed
 
 When using `rsync` to transfer huge amount of data between this device and another laptop/PC, I've noticed a degration of the transfer speed, which was used to 65MB/s, to ~ 10MB/s.
