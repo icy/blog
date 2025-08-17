@@ -18,6 +18,8 @@ When using `rsync` to transfer huge amount of data between this device and anoth
 
 The difference between 3400MHz vs 2700Mhz? it's 65MBs vs 38MBs seeing through rsync output!
 
+PS: The maxium throughput measured/seen from NAS device  is 75MB/s. Mergefs with passthrough=off.
+
 ### 9. Adding new cronjob
 
 1. Modify configuration (crontab-format): `/etc/config/contab`
