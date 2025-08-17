@@ -8,12 +8,13 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ### 10. Data transfer speed
 
-When using `rsync` to transfer huge amount of data between this device and another laptop, I've noticed a degration of the transfer speed, which was used to 65MB/s, to kinda of 10MB/s.
+When using `rsync` to transfer huge amount of data between this device and another laptop/PC, I've noticed a degration of the transfer speed, which was used to 65MB/s, to ~ 10MB/s.
 
-1. It's turned out that the cable/plugging issue. I changed the cable connection to the reciever end, using `ethtool` to ensure that 1Gbps mode is on (`ethtool NIC`)
+1. It's turned out that the cable/plugging issue. I changed the cable connection between NAS and the reciever end, using `ethtool` to ensure that 1Gbps mode is on (`ethtool NIC`) at both sides
 2. Then I've seen the `cpupower` has contributed a huge factor into the speed issue.
-3. The new configuration sets the CPU frequency to 800MHz, and that generated about 10-12MB/s even if both NICs are connected with 1Gbps bandwidth.
-4. Temporarily I configured cpupower to use the max speed if applicable, and the maximal speed 65MBs/ comes back.
+    
+	1. The new configuration sets the CPU frequency to 800MHz, and that generated about 10-12MB/s even if both NICs are connected with 1Gbps bandwidth.
+    2. Temporarily I configured cpupower to use the max speed if applicable, and the maximal speed 65MBs/ comes back.
 
 The difference between 3400MHz vs 2700Mhz? it's 65MBs vs 38MBs seeing through rsync output!
 
