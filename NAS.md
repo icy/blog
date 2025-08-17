@@ -18,7 +18,8 @@ When using `rsync` to transfer huge amount of data between this device and anoth
 
 The difference between 3400MHz vs 2700Mhz? it's 65MBs vs 38MBs seeing through rsync output!
 
-PS: The maxium throughput measured/seen from NAS device  is 75MB/s. Mergefs with passthrough=off.
+PS1: The maxium throughput measured/seen from NAS device  is 75MB/s. Mergefs with passthrough=off.
+PS2: Quite often `rsync` process terminates without a nice trace (not dmesg, not segmentation fault). It's likely an issue with the NIC on the pc. Error from rsync seems to indicate there was  an authentication error (weird). NAS device logs doesn't have an interesting events
 
 ### 9. Adding new cronjob
 
