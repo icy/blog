@@ -25,6 +25,7 @@ The difference between 3400MHz vs 2700Mhz? it's 65MBs vs 38MBs seeing through rs
 PS1: The maxium throughput measured/seen from NAS device  is 75MB/s. Mergefs with passthrough=off.
 PS2: Quite often `rsync` process terminates without a nice trace (not dmesg, not segmentation fault). It's likely an issue with the NIC on the pc. Error from rsync seems to indicate there was  an authentication error (weird). NAS device logs doesn't have an interesting events
 PS3: Iowait is reported to 26.5% when rsync needs to fetch a lot of small files. When big files are transferred, iolook up seems to be low (less iowait) and the speed could go up to  75MBs/
+PS4: NAs reports disk throughput max to 66.9MB/s - 67.3MB/s
 
 ### 9. Adding new cronjob
 
