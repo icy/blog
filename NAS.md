@@ -6,6 +6,23 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 12. raid1 rebuilding
+
+Qnap forum: https://forum.qnap.com/viewtopic.php?t=10268
+
+```
+[~] # cat /proc/sys/dev/raid/speed_limit_min
+50000
+[~] # cat /proc/sys/dev/raid/speed_limit_max 
+10000000
+[~] # cat /proc/mdstat       
+Personalities : [linear] [raid0] [raid1] [raid10] [raid6] [raid5] [raid4] [multipath] 
+md1 : active raid1 sdb3[3] sda3[2]
+      3897063936 blocks super 1.0 [2/1] [_U]
+      [==>..................]  recovery = 12.6% (494663040/3897063936) finish=4386.2min speed=12928K/sec
+      bitmap: 4/30 pages [16KB], 65536KB chunk
+```
+
 ### 11. qnas_console_install
 
 TODO. This, with drawPic daemon, was consuming CPU at an abonormal rate. killing the process is safe. Weird.
