@@ -37,6 +37,9 @@ md1 : active raid1 sdb3[3] sda3[2]
 
 ### 11. qnas_console_install
 
+PS: Even if we delete the binary file drawPic, system will restore them during the next boot.
+It's better to kill the process using some cron-based job.
+
 TODO. This, with drawPic daemon, was consuming CPU at an abonormal rate. killing the process is safe. Weird.
 
 ```
