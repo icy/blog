@@ -51,7 +51,7 @@ The difference between 3400MHz vs 2700Mhz? it's 65MBs vs 38MBs seeing through rs
 
 ### 9. Adding new cronjob
 
-1. Modify configuration (crontab-format): `/etc/config/contab`
+1. Modify configuration (crontab-format): `/etc/config/crontab`
 2. Reload/restart the daemon: `/etc/init.d/crond.sh reload`
 
 ### 8. Allow some users to ssh to system
