@@ -21,6 +21,14 @@ md1 : active raid1 sdb3[3] sda3[2]
       3897063936 blocks super 1.0 [2/1] [_U]
       [==>..................]  recovery = 12.6% (494663040/3897063936) finish=4386.2min speed=12928K/sec
       bitmap: 4/30 pages [16KB], 65536KB chunk
+...
+# after a while
+[~] # cat /proc/mdstat 
+Personalities : [linear] [raid0] [raid1] [raid10] [raid6] [raid5] [raid4] [multipath] 
+md1 : active raid1 sdb3[3] sda3[2]
+      3897063936 blocks super 1.0 [2/1] [_U]
+      [====>................]  recovery = 22.8% (892321280/3897063936) finish=568.8min speed=88039K/sec
+      bitmap: 2/30 pages [8KB], 65536KB chunk
 ```
 
 ### 11. qnas_console_install
