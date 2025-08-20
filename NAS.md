@@ -35,6 +35,33 @@ md1 : active raid1 sdb3[3] sda3[2]
 [~] # echo 70000 >/proc/sys/dev/raid/speed_limit_min 
 ```
 
+The first disk rebuilding is complete. after almost 2 days. Now the second one with a lot better thing. Of course, after I disable the `qnas_console_install` and adjust the speed limit
+
+```
+$ ssh  admin@nas cat /proc/mdstat
+Personalities : [linear] [raid0] [raid1] [raid10] [raid6] [raid5] [raid4] [multipath] 
+md1 : active raid1 sdb3[2] sda3[3]
+      3897063936 blocks super 1.0 [2/1] [U_]
+      [>....................]  recovery =  2.0% (77987840/3897063936) finish=478.1min speed=133113K/sec
+      bitmap: 1/30 pages [4KB], 65536KB chunk
+
+md322 : active raid1 sdb5[2] sda5[0]
+      6702656 blocks super 1.0 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+md256 : active raid1 sdb2[2] sda2[0]
+      530112 blocks super 1.0 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+md13 : active raid1 sdb4[128] sda4[129]
+      458880 blocks super 1.0 [128/2] [UU______________________________________________________________________________________________________________________________]
+      bitmap: 1/1 pages [4KB], 65536KB chunk
+
+md9 : active raid1 sdb1[128] sda1[129]
+      530048 blocks super 1.0 [128/2] [UU______________________________________________________________________________________________________________________________]
+      bitmap: 1/1 pages [4KB], 65536KB chunk
+```
+
 ### 11. qnas_console_install
 
 PS: Even if we delete the binary file drawPic, system will restore them during the next boot.
