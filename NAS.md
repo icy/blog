@@ -79,16 +79,16 @@ TODO. This, with drawPic daemon, was consuming CPU at an abonormal rate. killing
 When using `rsync` to transfer huge amount of data between this device and another laptop/PC, I've noticed a degration of the transfer speed, which was used to 65MB/s, to ~ 10MB/s.
 
 1. It's turned out that the cable/plugging issue. I changed the cable connection between NAS and the reciever end, using `ethtool` to ensure that 1Gbps mode is on (`ethtool NIC`) at both sides
-2. Then I've seen the `cpupower` has contributed a huge factor into the speed issue.
+2. (PC) Then I've seen the `cpupower` has contributed a huge factor into the speed issue.
     
-	1. The new configuration sets the CPU frequency to 800MHz, and that generated about 10-12MB/s even if both NICs are connected with 1Gbps bandwidth.
-    2. Temporarily I configured cpupower to use the max speed if applicable, and the maximal speed 65MBs/ comes back.
+	1. (PC) The new configuration sets the CPU frequency to 800MHz, and that generated about 10-12MB/s even if both NICs are connected with 1Gbps bandwidth.
+    2. (PC) Temporarily I configured cpupower to use the max speed if applicable, and the maximal speed 65MBs/ comes back.
 
 The difference between 3400MHz vs 2700Mhz? it's 65MBs vs 38MBs seeing through rsync output!
 
 1. PS1: The maxium throughput measured/seen from NAS device  is 75MB/s. Mergefs with passthrough=off.
 2. PS2: Quite often `rsync` process terminates without a nice trace (not dmesg, not segmentation fault). It's likely an issue with the NIC on the pc. Error from rsync seems to indicate there was  an authentication error (weird). NAS device logs doesn't have an interesting events
-3.  PS3: Iowait is reported to 26.5% when rsync needs to fetch a lot of small files. When big files are transferred, iolook up seems to be low (less iowait) and the speed could go up to  75MBs/
+3.  PS3: (NAS) Iowait is reported to 26.5% when rsync needs to fetch a lot of small files. When big files are transferred, iolook up seems to be low (less iowait) and the speed could go up to  75MBs/
 4. PS4: NAs reports disk throughput max to 66.9MB/s - 67.3MB/s
 
 ### 9. Adding new cronjob
