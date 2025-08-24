@@ -78,7 +78,7 @@ TODO. This, with drawPic daemon, was consuming CPU at an abonormal rate. killing
 
 When using `rsync` to transfer huge amount of data between this device and another laptop/PC, I've noticed a degration of the transfer speed, which was used to 65MB/s, to ~ 10MB/s.
 
-1. It's turned out that the cable/plugging issue. I changed the cable connection between NAS and the reciever end, using `ethtool` to ensure that 1Gbps mode is on (`ethtool NIC`) at both sides
+1. It's turned out that the cable/plugging issue. I changed the cable connection between NAS and the reciever end, using `ethtool` to ensure that 1Gbps mode is on (`ethtool NIC`) at both sides. (Later one I can confirm this cable is broken; there is no problem with NICs.)
 2. (PC) Then I've seen the `cpupower` has contributed a huge factor into the speed issue.
     
 	1. (PC) The new configuration sets the CPU frequency to 800MHz, and that generated about 10-12MB/s even if both NICs are connected with 1Gbps bandwidth.
