@@ -6,6 +6,20 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 13. List all QuMagie albums
+
+Creating new album from QuMagie can be a nightmare. The code seemed not to validate the user input, and if the timerange is invalid (ie `1970/1/1-`), album can be still created, but, the next album listing will generate 500 errors! And from that point, QuMagie seems totally useless. I have tried to remove/reinstall QuMagie but the list of known albums still persists, the issue still persists (though list of all media sources are gone and I have to input again -- this is weird, because this list is handle by Multiple Media Console)
+
+To drop the problematic album, it's to drop the  thing using `mysql` tool!
+
+```
+$ ssh -L 3306:localhost:3310 admin@has -fN
+$ mysql -u root -psecret -P 3306 -e 'use s01; select * from pictureAlbumTable;'
+$ mysql -u root -psecret -P 3306 -e 'use s01; delete from pictureAlbumTable where iPhotoAlbumId=10;'
+```
+
+It's interesting that the AlbumId is integer, but from QuMagie interface you see it's a string, something like `nUwqer` or alike.
+
 ### 12. raid1 rebuilding
 
 Qnap forum: https://forum.qnap.com/viewtopic.php?t=10268
