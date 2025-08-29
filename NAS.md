@@ -6,6 +6,12 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 15. Accessing database
+
+As seen in the 13rd section, we use ssh's port-forwarding. The password is `qnapqnap`. There are two databases `s00` and `s01`, and most of the valuable data is on `s01`. There is a lenghthy list of tables, it's better to dump them out and `grep` instead.
+
+On file system level, the `mariadb` database is using some files under the path `nas://share/CE_CACHEDEV1_DATA/.system/`, and this critical path is the only thing you need to worry if you need to transfer your data. On some note it's said `QuMagie` export/import feature  won't work and you have to use the trick: https://www.reddit.com/r/qnap/comments/np4q0p/how_to_transfer_the_full_qumagie_database/
+
 ### 14. Full index
 
 It's a nightmare. This option will _delete_ all existing thunbnails, links, album information. It's starting from a scratch. I picked up that  my mistake and now I have to reindex all 200k files.
