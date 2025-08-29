@@ -6,9 +6,18 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 17. Creating new album from command line 
+
+```
+./login.sh
+./create-album.sh
+{"status":0,"output":"cJinsP","themeMsg":0,"timestamp":"2025-08-29 08:51:25"}status=0 id=cJinsP url=https://192.168.0.6/qumagie/album/cJinsP
+{"status":0,"output":"EdRbko","themeMsg":0,"timestamp":"2025-08-29 08:51:27"}status=0 id=EdRbko url=https://192.168.0.6/qumagie/album/EdRbko
+```
+
 ### 16. Login to system with curl
 
-It's very possible now. Script later.
+It's very possible now. Script later (`login.sh`).
 
 ```
 Aug 29 06:53:33 192.168.0.6 qulogd[14061]: conn log: Users: sony, Source IP: 192.168.0.10, Computer name: ---, Connection type: HTTPS, Accessed resources: Administration, Action: Login Success
