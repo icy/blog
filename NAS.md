@@ -6,6 +6,10 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 14. Full index
+
+It's a nightmare. This option will _delete_ all existing thunbnails, links, album information. It's starting from a scratch. I picked up that  my mistake and now I have to reindex all 200k files.
+
 ### 13. List all QuMagie albums
 
 Creating new album from QuMagie can be a nightmare. The code seemed not to validate the user input, and if the timerange is invalid (ie `1970/1/1-`), album can be still created, but, the next album listing will generate 500 errors! And from that point, QuMagie seems totally useless. I have tried to remove/reinstall QuMagie but the list of known albums still persists, the issue still persists (though list of all media sources are gone and I have to input again -- this is weird, because this list is handle by Multiple Media Console)
