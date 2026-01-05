@@ -15,7 +15,7 @@ I won't tell my "why"; but I share how the thing would be done.
    create new line `group:bill.fences:x:1000:bill.gates`, and after saving the file
    `/etc/group`, you will have two groups `bill.fences`  and `bill.gates`, both
    share the same gid=1000, and both includes the same user `bill.gates` :)
-1. For users, you follow the same id, but changes land on 3 files `/etc/passwd`,
+1. For users, you follow the same way, but changes land on 3 files `/etc/passwd`,
    `/etc/passwd-` and `/etc/shadow`.
 
 Please mind the order of new entries. The very first line wins and some application which
