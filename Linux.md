@@ -24,7 +24,8 @@ works with `uid` may only print the first username what matches the `uid`.
 ### Fixing my custom dns resolver after system upgrades
 
 Before continuing these commands, I have to fix `/etc/resolv.conf` to use some temporary DNS resolver.
-The change will be reverted once `mdns` can be up and running.
+The change will be reverted once `mdns` can be up and running. For some reason (:D) system umask was set to 077
+and new installation of Ruby plugins at system level was inaccessible by normal users.
 
 ```
 $ sudo su -
