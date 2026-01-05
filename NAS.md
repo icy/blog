@@ -6,6 +6,10 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 18. DON'T
+
+1. Don't shut down the NAS device ungracefully! After any uncleaned shutdown event, the system will enter the RAID-recovery mode. Depends on the size of your device, this process may take forever, and the boot process just hangs. Sometimes the device can't boot up with uncleaned /unsync raid state . To get this fixed, you need to boot the device from an external USB device, run some basic `mdadm` command to get your raid1 devices recovered. This will help, but once the device can boot up, it will run the whole recovery process again, likely it has some hard-coded state file which is out-of-sync with the reality . This is very hard and expensive lessons. I got trouble once (when I didn't know a *** and reinstalled the whole NAS device with data remained, and eventually figured out how that worked on the 2nd time, but I had to wait at least 2 * 10 hours to get my device in sync state!
+
 ### 17. Creating new album from command line 
 
 ```
