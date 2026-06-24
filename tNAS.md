@@ -14,7 +14,10 @@
 ## Upgrades
 
 - [ ] June 2026: The PSU died in June 2026 and is replaced with a brand new one. At first, 
- a wrong version was bought (Mars Gaming MPB550SI, which only has 1 connector for PCIe 6+2 PIN)
+ a wrong version was bought (Mars Gaming MPB550SI, which only has 1 connector for PCIe 6+2 PIN).
+
+ Fun fact: When I returned the wrong PSU to `Amazon`, I accidently packed up the only `IDE-to-SATA` power cable.
+ Now I need to find a cheap one.!
 
 ## Dataflow
 
