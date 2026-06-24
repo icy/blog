@@ -1,6 +1,6 @@
 ## Description
 
-`tnas` is powered by `TrueNas` (Communitity edition). It serves as a backup of the primary [NAS](NAS.md) instance.
+`tnas` is powered by `TrueNas` (Community edition). It serves as a backup of the primary [NAS](NAS.md) instance.
 
 ## Hardware
 
