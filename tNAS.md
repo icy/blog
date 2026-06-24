@@ -15,3 +15,11 @@
 
 - [ ] June 2026: The PSU died in June 2026 and is replaced with a brand new one. At first, 
  a wrong version was bought (Mars Gaming MPB550SI, which only has 1 connector for PCIe 6+2 PIN)
+
+## Dataflow
+
+```
+Primary Nas User ----> tNas  <---- control machine
+```
+
+Data is synchronized manually with `rsync` script.
