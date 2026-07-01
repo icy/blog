@@ -9,3 +9,7 @@ engineer invented "new" HTTP/TCP protocol and communication middleware.
 See also https://en.wikipedia.org/wiki/RTFM
 
 No need to explain. RTFW (Read the fucking wiki please!)
+
+## XY  problem
+
+https://en.wikipedia.org/wiki/XY_problem
