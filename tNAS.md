@@ -5,7 +5,7 @@
 ## Hardware
 
 - [ ] CPU: AMD Phenom(tm) II X4 965 Processor
-- [ ] Memory: 12GB
+- [ ] Memory: 12GB (the main board supports up to 16 GB (4 x 1.5V DDR3 DIMM sockets)
 - [ ] Mainboard: GA-890XA-UD3 https://www.gigabyte.com/Motherboard/GA-890XA-UD3-rev-20#ov (2012)
 - [ ] Graphics card:  Radeon HD 7950/8950 OEM / R9 280
 - [ ] Price: €70
