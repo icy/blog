@@ -2,7 +2,7 @@
 
 ### Sharing uid/gid between multiple Linux users
 
-### The trick
+#### The trick
 
 It's very possible to create multiple  users and groups those share the same uid/gid.
 Seriously this may confuse everyone but sometimes you will really need to do that.
@@ -23,7 +23,7 @@ I won't tell my "why"; but I share how the thing would be done.
 Please mind the order of new entries. The very first line wins and some application which
 works with `uid` may only print the first username what matches the `uid`.
 
-### With podman-6.x
+#### With podman-6.x
 
 _Updated 2026-08-12:_ Podman-6.0 will complain when there are duplicated uid/gid on the system.
 
