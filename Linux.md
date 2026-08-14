@@ -58,6 +58,26 @@ To get rid of this error, you can edit the two files `/etc/subgid` and `/etc/sub
 and remove the `duplicated` entries: If two users A and B whose  `uid/gid` are the same,
 only A (or B)'s entry should present in `/etc/subuid`  and `/etc/subgid`.
 
+Expected output: Both commands (following) return exactly 1 line
+
+```
+$ getsubids `id -un`
+0: myuser 10000 65536
+$ getsubids -g `id -un`
+0: myuser 10000 65536
+```
+
+What went wrong:
+
+```
+$ getsubids `id -un`
+0: myuser 10000 65536
+1: myuser 10000 65536
+$ getsubids -g `id -un`
+0: myuser 10000 65536
+1: myuser 10000 65536
+```
+
 ### Fixing my custom dns resolver after system upgrades
 
 Before continuing these commands, I have to fix `/etc/resolv.conf` to use some temporary DNS resolver.
