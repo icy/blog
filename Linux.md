@@ -1,5 +1,26 @@
 ## Linux linux...
 
+### When my network is down
+
+When coming back from my vacation, I see my laptop's network is completely down.  Both interfacts (Wireless/Ethernet)
+are reported `DOWN`. No special trace from `dmesg`. This  seems to happen after the laptop power outage
+(the laptop indeed was turned off; we talked about this later.)
+
+I tried different ways to get my network recovered
+
+* Restarted NetworkManager service
+* Change the cables
+* Try to use an external network adapter
+
+After about 20 minutes, I am quite exhausted and feel very disappointed. This laptop is pretty old,
+maybe it's time to say goodbye?
+
+Luckily I found the cause of the problem. The root cause they said: The router didn't have power;
+the power cable was unplugged. I didn't notice this before because all LEDs were configured to be OFF
+(so I can sleep at night.)
+
+Lesson learnt: LMAO
+
 ### Sharing uid/gid between multiple Linux users
 
 #### The trick
