@@ -2,7 +2,7 @@
 
 ### When my network is down
 
-When coming back from my vacation, I see my laptop's network is completely down.  Both interfacts (Wireless/Ethernet)
+When coming back from my vacation, I see my laptop's network is completely down.  Both interfaces (Wireless/Ethernet)
 are reported `DOWN`. No special trace from `dmesg`. This  seems to happen after the laptop power outage
 (the laptop indeed was turned off; we talked about this later.)
 
