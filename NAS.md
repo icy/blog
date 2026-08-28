@@ -10,6 +10,14 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 20. Upgrading firmware from very old version
+
+It's not clear how to upgrade from `5.2.3`.build_number to `5.2.10`.build_number. The system only checks for build versions, and it's reporting the system is up-to-date. When uploading firmware manually, the system reports the version `5.2.10` is older than `5.2.3`. That's a scary situation!
+
+The safest path is to upgrade slowly, from `5.2.3` to `5.2.4`, and then to `5.2.5` and so on. That's quite lengthy process. 
+
+It went crazy! When I upgraded my system from `5.2.6` to  `5.2.7`, the fan went so crazy when the system was being updated. It's really crazy fan, the voice is very auditable, very loud and lasted about 20-30 seconds, like the sound of a F-18 fighter-jet when it's started :D . I couldn't be fast enough to record the voice (I was trying on my phone which didn't have any voice recorder by default.) Luckily the system can be started after that. I checked system temperature, around 34 (C) and decided to continue until the system is at `5.2.10`.
+
 ### 19. Updating and installing apps
 
 For whatever reason, when being using a proxy, the device can't do anything to update packages. It's connecting to https://osm.api.myqnapcloud.com but fails to  load additional data. In the mean time, to fetch package databases, I have to do a few things
