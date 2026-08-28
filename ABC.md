@@ -1,3 +1,7 @@
+## EMEA
+
+Europe, the Middle East and Africa. The first time I learnt this is 2021 (covid time).
+
 ## YOLO
 
 You only live once! I recall read some post on Reddit when somepeople mentioned their team YOLO-ed and created technical debts.
