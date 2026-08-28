@@ -4,9 +4,30 @@ All information below is relevant to QNAP TS-x64 device. My version is`-8G` whic
 
 Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-8G.pdf
 
-## TOC 
+## TOC
 
-<AI update here please>
+- [Description](#description)
+- [Issues](#issues)
+  - [1. crypt-setup and crypto module](#1-crypt-setup--and-crypto-module)
+  - [2. Support web site](#2-support-web-site)
+  - [3. QuFirewall is too permissive dealing with docker container](#3-qufirewall-is-too-permissive-dealing-with-docker-container)
+  - [4. Memory upgrade](#4-memory-upgrade)
+  - [5. Prevent NAS from being updated and/or calling home](#5-prevent-nas-from-being-updated-ao-calling-home)
+  - [6. NAS upgrade interrupted and failed to boot](#6-nas-upgrade-interrupted-and-failed-to-boot)
+  - [7. IGNORE_EXTENSIONS in Network Recycle Bin](#7-ignore_extensions-in-network-recycle-bin)
+  - [8. Allow some users to ssh to system](#8-allow-some-users-to-ssh-to-system)
+  - [9. Adding new cronjob](#9-adding-new-cronjob)
+  - [10. Data transfer speed](#10-data-transfer-speed)
+  - [11. qnas_console_install](#11-qnas_console_install)
+  - [12. raid1 rebuilding](#12-raid1-rebuilding)
+  - [13. List all QuMagie albums](#13-list-all-qumagie-albums)
+  - [14. Full index](#14-full-index)
+  - [15. Accessing database](#15-accessing-database)
+  - [16. Login to system with curl](#16-login-to-system-with-curl)
+  - [17. Creating new album from command line](#17-creating-new-album-from-command-line)
+  - [18. DON'T](#18-dont)
+  - [19. Updating and installing apps](#19-updating-and-installing-apps)
+  - [20. Upgrading firmware from very old version](#20-upgrading-firmware-from-very-old-version)
 
 ## Issues
 
