@@ -38,6 +38,8 @@ Let's keep in mind that proxy setting is doing well for everything else from qna
 
    This is very hard and expensive lesson. I got trouble once (when I didn't know a *** and reinstalled the whole NAS device with data remained, and eventually figured out how that worked on the 2nd time, but I had to wait at least 2 * 10 hours to get my device in sync state!
 
+PS: On 2026.08.26 I did test my remote control and it powered off the device. It took almost 3 days to restore the raid state :) 
+
 ### 17. Creating new album from command line 
 
 ```
