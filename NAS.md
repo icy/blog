@@ -4,7 +4,20 @@ All information below is relevant to QNAP TS-x64 device. My version is`-8G` whic
 
 Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-8G.pdf
 
+## TOC 
+
+<AI update here please>
+
 ## Issues
+
+### 19. Updating and installing apps
+
+For whatever reason, when being using a proxy, the device can't do anything to update packages. It's connecting to https://osm.api.myqnapcloud.com but fails to  load additional data. In the mean time, to fetch package databases, I have to do a few things
+
+* Disable firewall rules from router to allow the device to access public internet.
+* Disable proxy settings
+
+Let's keep in mind that proxy setting is doing well for everything else from qnap console. 
 
 ### 18. DON'T
 
