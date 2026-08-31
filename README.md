@@ -10,6 +10,11 @@ Its memory capacity is 8GB. And cpu?
 It's  `Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz` (2 cores x 2 threads)?
 This is just enough for daily web surfing... until it isn't.
 
+PS: Today I've found the laptop has two USB-3.0 ports. I had never needed to worry about the external
+devices' speed :)
+
+Link: https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_X240/ThinkPad_X240_Spec.PDF
+
 ## CPU power policy
 
 As the laptop CPU can be adjusted to use much or less power, here comes CPU Power policy. 
