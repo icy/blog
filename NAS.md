@@ -1,6 +1,6 @@
 ## Description
 
-All information below is relevant to QNAP TS-x64 device. My version is`-8G` which means it has 8GB by default
+All information below is relevant to QNAP TS-264-8G device. The device's memory is [now 16G](#4-memory-upgrade).
 
 Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-8G.pdf
 
