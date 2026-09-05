@@ -31,6 +31,22 @@ Hardware  spec: https://www.qnap.com/en-us/product/ts-264/specs/hardware/TS-264-
 
 ## Issues
 
+### 21. Turning off the device from command line
+
+Sometimes the web console is not responsive. 
+
+```
+$ ssh admin@nas
+$ /sbin/poweroff
+```
+
+The output of `dmesg` already contains some delay information. I haven't known what that means
+
+```
+$ dmesg
+[15708.856922] Total shutdown latency is 30, keep the watchdog timeout as 120
+```
+
 ### 20. Upgrading firmware from very old version
 
 It's not clear how to upgrade from `5.2.3`.build_number to `5.2.10`.build_number. The system only checks for build versions, and it's reporting the system is up-to-date. When uploading firmware manually, the system reports the version `5.2.10` is older than `5.2.3`. That's a scary situation!
