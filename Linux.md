@@ -44,6 +44,15 @@ I won't tell my "why"; but I share how the thing would be done.
 Please mind the order of new entries. The very first line wins and some application which
 works with `uid` may only print the first username what matches the `uid`.
 
+#### Adding an user to other group
+
+If two users share the same `uid` you have to add them to another group independtly
+
+```
+$ gpasswd -a A foo
+$ gpasswd -a B foo
+```
+
 #### With podman-6.x
 
 _Updated 2026-08-12:_ Podman-6.0 will complain when there are duplicated uid/gid on the system.
