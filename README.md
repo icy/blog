@@ -25,7 +25,7 @@ will work accordingly :)
 ## Slow down my applications
 
 ```
-$ cpulimit -l 20 terragrunt --terragrunt-parallelism 1 apply
+$ cpulimit -i -l 20 terragrunt --terragrunt-parallelism 1 apply
 $ nice -n 19 terraform -parallelism 1
 ```
 
@@ -52,7 +52,7 @@ Sometimes Enlightenment uses so much cpu. It's 50% from htop output. Looks like 
 and though admitted no root cause/fix has been found. An easy work-around is to run the daemon with some cpu limit
 
 ```
-exec dbus-launch  cpulimit -l 40 enlightenment_start
+exec dbus-launch  cpulimit -i -l 40 enlightenment_start
 ```
 
 Using 30 or lower number will not work. It will force Enlightenment to behave crazily: Starting with 20, 
@@ -66,7 +66,7 @@ of this but yeah, after switching to `-l 40` everything works fine and I haven't
 ### cpulimit
 
 ```
-exec dbus-launch cpulimit -l 200 firefox --class FirefoxNoXXX -ProfileManager -no-remote
+exec dbus-launch cpulimit -i -l 200 firefox --class FirefoxNoXXX -ProfileManager -no-remote
 ```
 
 ### Config
