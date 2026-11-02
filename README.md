@@ -66,7 +66,7 @@ of this but yeah, after switching to `-l 40` everything works fine and I haven't
 ### cpulimit
 
 ```
-exec dbus-launch cpulimit -i -l 200 firefox --class FirefoxNoXXX -ProfileManager -no-remote
+exec dbus-launch cpulimit -i -l 400 firefox --class FirefoxNoXXX -ProfileManager -no-remote
 ```
 
 ### Config
