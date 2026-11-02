@@ -14,7 +14,7 @@ See also https://en.wikipedia.org/wiki/RTFM
 
 No need to explain. RTFW (Read the fucking wiki please!)
 
-## XY  problem
+## XY problem
 
 https://en.wikipedia.org/wiki/XY_problem . Learnt it some year in 200x.
 
@@ -25,3 +25,7 @@ Pita -- Pain in the Ass. Learnt it from Wolfram, around 2021 :)
 ## LMAO
 
 lmao:) laugh my ass off!
+
+## NSFW
+
+Not safe for work. 2021
