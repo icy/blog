@@ -17,3 +17,11 @@ No need to explain. RTFW (Read the fucking wiki please!)
 ## XY  problem
 
 https://en.wikipedia.org/wiki/XY_problem
+
+## Pita
+
+Pita -- Pain in the Ass. Learnt it from Wolfram, around 2021 :)
+
+## LMAO
+
+lmao:) laugh my ass off!
