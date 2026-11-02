@@ -29,6 +29,22 @@ $ cpulimit -i -l 20 terragrunt --terragrunt-parallelism 1 apply
 $ nice -n 19 terraform -parallelism 1
 ```
 
+## psclean.sh
+
+The script that kills all crazy processes on the system. Run as root and clean up everything!
+```
+$ cat ~/bin/psclean.sh
+#!/usr/bin/env bash
+
+set -x
+pkill gvfs
+pkill xdg
+pkill kde
+pkill xfce
+pkill dconf-
+kill $(ps aux |grep 'spi-bus-launc[h]'| awk '{print $2}')
+```
+
 ## Enlightenment vs xfce4 vs YourWarName
 
 ### Since 2011
