@@ -16,7 +16,7 @@ No need to explain. RTFW (Read the fucking wiki please!)
 
 ## XY  problem
 
-https://en.wikipedia.org/wiki/XY_problem
+https://en.wikipedia.org/wiki/XY_problem . Learnt it some year in 200x.
 
 ## Pita
 
