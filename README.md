@@ -82,6 +82,8 @@ of this but yeah, after switching to `-l 40` everything works fine and I haven't
 ### cpulimit
 
 ```
+# 400: full!
+# 200:  too low:(
 exec dbus-launch cpulimit -i -l 400 firefox --class FirefoxNoXXX -ProfileManager -no-remote
 ```
 
